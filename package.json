@@ -1,0 +1,32 @@
+{
+  "name": "react-native-icon-picker",
+  "version": "1.0.1",
+  "description": "React native icon picker, contain vector icon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kawaljain/react-native-icon-picker.git"
+  },
+  "keywords": [
+    "react-native",
+    "icon-picker",
+    "react-native-icon-picker",
+    "icon-picker",
+    "picker-native-icon",
+    "vector-icon-picker",
+    "native-icon-picker",
+    "ios-android-icon-picker",
+    "android-native-icon-picker",
+    "ios-native-icon-picker",
+    "android-icon-picker"
+  ],
+  "author": "Kawal Jain <kawaljain03@gmail.com> (http://kawaljain.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kawaljain/react-native-icon-picker/issues"
+  },
+  "homepage": "https://github.com/kawaljain/react-native-icon-picker#readme"
+}
