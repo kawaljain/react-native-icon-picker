@@ -1,6 +1,6 @@
 {
   "name": "react-native-icon-picker",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "React native icon picker, contain vector icon",
   "main": "index.js",
   "scripts": {
@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/kawaljain/react-native-icon-picker/issues"
   },
-  "homepage": "https://github.com/kawaljain/react-native-icon-picker#readme"
+  "homepage": "https://github.com/kawaljain/react-native-icon-picker#readme",
+  "dependencies": {
+    "react-native-vector-icons": "^8.1.0"
+  }
 }

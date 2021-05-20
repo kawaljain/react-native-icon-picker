@@ -1,4 +1,5 @@
-# React native icon picker
+# React native icon picker (Only For Expo )
+
 A cross platform react native icon picker component for android and ios. It includes vector icon and it is easily customizable. Its includes
 
 - AntDesign
@@ -10,6 +11,7 @@ A cross platform react native icon picker component for android and ios. It incl
 - MaterialCommunityIcons
 - MaterialIcons
 
+we are working for native version. we update you soon...
 ## Screen Capture
 ## Installation
 ```sh
