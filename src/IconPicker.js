@@ -26,31 +26,42 @@ const iconComponents = {
   MaterialCommunityIcons,
   MaterialIcons,
 };
-const ICON_COLOR = "#000000";
+const ICON_COLOR_SELECTED_COLOR = "white";
+const ICON_COLOR = "#999999";
+const ICON_SIZE = 20;
+const MODAL_CLOSE_COLOR = "#000000";
+const MODAL_CLOSE_ICON_SIZE = 20;
 class IconPicker extends Component {
-  renderItem = (data) =>
-    data.map((item, index) => {
+  renderItem = (data) => {
+    let selectedIconContainerStyle = this.props.selectedIconContainerStyle
+      ? this.props.selectedIconContainerStyle
+      : styles.selectedItem;
+    let { selectedIcon } = this.props;
+    return data.map((item, index) => {
       if (!item) return;
 
       const Family = iconComponents[item.family];
       if (!Family) return;
 
+      let isSelected =
+        selectedIcon &&
+        selectedIcon.icon == item.icon &&
+        selectedIcon.family == item.family;
       return (
         <TouchableOpacity
           key={index}
-          style={[
-            styles.item,
-            {
-              borderColor: item.color,
-            },
-          ]}
+          style={[styles.item, isSelected ? selectedIconContainerStyle : {}]}
           onPress={() => this.props.onSelect(item)}
         >
-          <Family name={item.icon} size={30} color={item.color} />
+          <Family
+            name={item.icon}
+            size={ICON_SIZE}
+            color={isSelected ? ICON_COLOR_SELECTED_COLOR : ICON_COLOR}
+          />
         </TouchableOpacity>
       );
     });
-
+  };
   render() {
     const { iconDetails, showIconPicker } = this.props;
     const headerTitle = this.props.headerTitle
@@ -90,7 +101,11 @@ class IconPicker extends Component {
                     <Text style={styles.modalTitle}>{headerTitle}</Text>
                   </View>
                   <TouchableOpacity onPress={this.props.toggleIconPicker}>
-                    <Ionicons name={"close"} size={30} color="#000" />
+                    <Ionicons
+                      name={"close"}
+                      size={MODAL_CLOSE_ICON_SIZE}
+                      color={MODAL_CLOSE_COLOR}
+                    />
                   </TouchableOpacity>
                 </View>
               </View>
@@ -122,6 +137,8 @@ IconPicker.propTypes = {
   toggleIconPicker: PropTypes.func.isRequired,
   iconDetails: PropTypes.array.isRequired,
   content: PropTypes.any,
+  selectedIcon: PropTypes.object,
+  selectedIconContainerStyle: PropTypes.object,
 };
 
 export default IconPicker;
