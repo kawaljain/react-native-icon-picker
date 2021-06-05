@@ -13,7 +13,9 @@ A cross platform react native icon picker component for android and ios. It incl
 
 we are working for native version. we update you soon...
 
-## Screen Capture
+## Example [ClickMe](https://snack.expo.io/@kawaljain/react-native-icon-picker)
+
+    Above link contain working example of icon picker
 
 ## Installation
 
