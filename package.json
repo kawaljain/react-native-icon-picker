@@ -31,5 +31,6 @@
   "homepage": "https://github.com/kawaljain/react-native-icon-picker#readme",
   "dependencies": {
     "react-native-vector-icons": "^8.1.0"
-  }
+  },
+  "types": "index.d.ts"
 }
